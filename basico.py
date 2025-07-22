@@ -1,5 +1,5 @@
 import math
-import string
+import os
 
 #En este primer documeto tendremos lo siguiente:
 #1. Tipos de Variables
@@ -10,6 +10,7 @@ import string
 #1. Tipos de Variables
 
 #Variables de tipo entero
+os.system("clear")
 
 a = 10
 b = 20
@@ -32,9 +33,12 @@ print("La suma de x y y es:", z)
 
 #Variables de tipo cadena
 
-nombre= string(input("dime que quieres de  nombre"))
-apellido = string(input("dimer el apellido que quieres"))
+nombre= input("dime el nombre que quieres: ")
+apellido = input("dime el apellido que quieres")
 print("El nombre completo es:", nombre + " " + apellido)
+pais, ciudad = input("dime el pais y la ciudad que quieres: ").split()
+print("El país es:", pais)
+print("La ciudad es:", ciudad)
 
 #Variables booleanas
 es_estudiante = True
@@ -91,14 +95,15 @@ print("La división es:", resultado)
     
 #3. Ejercicios de secuenciales
 
-
-num1 = int(input("Ingrese el primer número: "))
-num2 = int(input("Ingrese el segundo número: "))
-print(calcular_area_rectangulo(num1, num2))
-
-
 def calcular_area_rectangulo(base, altura):
     return base * altura
+
+base = int(input("Ingrese el primer número: "))
+altura = int(input("Ingrese el segundo número: "))
+resultado = calcular_area_rectangulo(base, altura)
+print ("El área del rectángulo es:", resultado)
+
+
 def calcular_perimetro_rectangulo(base, altura):
     return 2 * (base + altura)
 def calcular_area_circulo(radio):
@@ -116,5 +121,30 @@ def es_par_o_impar(numero):
         return "El número es par"
     else:
         return "El número es impar"
+    
 
+def verificar_edad(edad):
+    if edad < 18:
+        return "Eres menor de edad"
+    elif edad == 18:
+        return "Tienes 18 años, eres mayor de edad"
+    else:
+        return "Eres mayor de edad"
+    
+
+edad = int(input("Ingrese su edad: "))
+resultado = verificar_edad(edad)
+print(resultado)
+
+edad2= int(input("Ingrese su edad: "))
+a = input("¿Tienes carnet de conducir? (si/no): ").strip().lower()
+if a == "si":
+    carnet = True
+else:
+    carnet = False
+
+if carnet and edad2 >= 18:
+    print("Puedes conducir")
+else:
+    print("No puedes conducir")
 
