@@ -1,16 +1,14 @@
 import math
 import os
-
+os.system("clear")
 #En este primer documeto tendremos lo siguiente:
 #1. Tipos de Variables
 #2. Funciones sencillas
-#3. Ejercicios de secuenciales
-#4. Introduccion a las estructuras de control
+#3. Introduccion a las estructuras de control
 
 #1. Tipos de Variables
 
 #Variables de tipo entero
-os.system("clear")
 
 a = 10
 b = 20
@@ -33,7 +31,7 @@ print("La suma de x y y es:", z)
 
 #Variables de tipo cadena
 
-nombre= input("dime el nombre que quieres: ")
+nombre= input("dime el nombre que quieres: ") # EL input de tipo string no hace falta definir que es de tipo String
 apellido = input("dime el apellido que quieres")
 print("El nombre completo es:", nombre + " " + apellido)
 pais, ciudad = input("dime el pais y la ciudad que quieres: ").split()
@@ -41,6 +39,7 @@ print("El país es:", pais)
 print("La ciudad es:", ciudad)
 
 #Variables booleanas
+
 es_estudiante = True
 tiene_trabajo = False
 print("Es estudiante:", es_estudiante)
@@ -52,30 +51,33 @@ def sumar(a, b):
     return a + b
 
 # Solicitar al usuario dos números y mostrar la suma
+
 print("que numeros quieres sumar?")
 num1 = int(input("ingresa el primer numero: "))
 num2 = int(input("ingresa el segundo numero: "))
-resultado = sumar(num1, num2)
+resultado = sumar(num1, num2) # Usamos la función sumar previamente creada
 print("La suma es:", resultado)
 
 def restar(a, b):
     return a - b
 
 # Solicitar al usuario dos números y mostrar la resta
+
 print ("que numeros quieres restar?")
 num1 = int(input("ingresa el primer numero: "))
 num2 = int(input("ingresa el segundo numero: "))
-resultado = restar(num1, num2)
+resultado = restar(num1, num2) # Usamos la función restar previamente creada
 print("La resta es:", resultado)
 
 def multiplicar(a, b):
     return a * b
 
 # Solicitar al usuario dos números y mostrar la multiplicación
+
 print("que numeros quieres multiplicar?")
 num1 = int(input("ingresa el primer numero: "))
 num2 = int(input("ingresa el segundo numero: "))
-resultado = multiplicar(num1, num2)
+resultado = multiplicar(num1, num2) # Usamos la función multiplicar previamente creada
 print("La multiplicación es:", resultado)
 
 def dividir(a, b):
@@ -85,37 +87,16 @@ def dividir(a, b):
         return "Error: División por cero"
     
 # Solicitar al usuario dos números y mostrar la división
+
 print("que numeros quieres dividir?")
 num1 = int(input("ingresa el primer numero: "))
 num2 = int(input("ingresa el segundo numero: "))
-resultado = dividir(num1, num2)
+resultado = dividir(num1, num2) # Usamos la función dividir previamente creada
 print("La división es:", resultado)
-    
-
-    
-#3. Ejercicios de secuenciales
-
-def calcular_area_rectangulo(base, altura):
-    return base * altura
-
-base = int(input("Ingrese el primer número: "))
-altura = int(input("Ingrese el segundo número: "))
-resultado = calcular_area_rectangulo(base, altura)
-print ("El área del rectángulo es:", resultado)
-
-
-def calcular_perimetro_rectangulo(base, altura):
-    return 2 * (base + altura)
-def calcular_area_circulo(radio):
-    return math.pi * radio ** 2
-def calcular_perimetro_circulo(radio):
-    return 2 * math.pi * radio
-def calcular_area_triangulo(base, altura):
-    return (base * altura) / 2
-def calcular_perimetro_triangulo(lado1, lado2, lado3):
-    return lado1 + lado2 + lado3
 
 #4. Introducción a las estructuras de control
+
+#Tenemos los if, elif y else    
 def es_par_o_impar(numero):
     if numero % 2 == 0:
         return "El número es par"
